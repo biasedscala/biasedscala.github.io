@@ -7,3 +7,8 @@
 	- [中文版本](01-helloworld_zh.md.html)
 - [I like Future more](02-I-like-Future-more.md.html)
 
+# [The Author](https://afoo.me/whoami.html)
+
+[About Me](https://afoo.me/whoami.html)
+
+
