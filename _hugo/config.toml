@@ -1,7 +1,9 @@
 baseURL = 'https://biasedscala.github.io/'
 languageCode = 'en-us'
 title = 'Biased Scala'
-theme = "hugo-ink"
+# theme = "hugo-ink"
+theme = "hyde"
+# theme = "researcher"
 
 [params]
   description = "My Baised Opinion on Scala"

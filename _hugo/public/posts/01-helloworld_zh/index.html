@@ -1,101 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Biased Scala之Hello World - Biased Scala</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="Biased Scala之Hello World">
-<meta itemprop="description" content="Scala3出来之前， 写个简单hello world程序要声明一个object:
-object Main{ def main(args: Array[String]) : Unit = { println(&#34;Hello, World&#34;) } } Scala3出来之后，有了一个革命性的改善， 那就是main方法的入口直接用@main标注一下就可以了, hello world即刻变成one-liner:
-@main def hello: Unit = println(&#34;Hello world!&#34;) Scala3的编译器会自动生成外围结构，对于程序员来说，那些劳神子本就不应该操心，程序员是计算机语言的用户， 对用户来说，越简单越好，越少敲几次键盘越好。 编译器搞得好，就会把简单留给用户，把复杂留给自己。
-再加上Scala3废除了很傻逼的package object，用Scala3写脚本也将成为更加赏心悦目的体验。
-当然， Scala2.x也不是说不能写脚本， lihaoyi搞的Ammonite(https://ammonite.io/)也还不错， 但碰上Scala3就遭遇降级了，@main直接冲突，你有我也有，哈
-之前用Ammonite写了满满一个workspace.amm（项目），但架不住自己是IDE拉扯大的程序员出身啊， 没有了依赖的自动管理和语法的自动提示，语法再简单，用来写复杂一点儿的脚本也是小痛苦的事情，所以， Scala2.x时代， 囧最终还是宁愿新建一个dirtyWorks项目，IDE里写，IDE里跑， 实在高频的脚本，那咱就编译成jar直接java -jar xyz.jar呗，甚至于想进一步追求性能与迅速可用，那就用GraalVM的native-image编译成native的可执行文件并加到PATH里去run呗！
-Anyway，我觉得Scala3里第一个走对了的路就是去除package object，而且还一@main解千愁。"><meta itemprop="datePublished" content="2021-10-10T08:47:11+01:00" />
-<meta itemprop="dateModified" content="2021-10-10T08:47:11+01:00" />
-<meta itemprop="wordCount" content="45">
-<meta itemprop="keywords" content="" /><meta property="og:title" content="Biased Scala之Hello World" />
-<meta property="og:description" content="Scala3出来之前， 写个简单hello world程序要声明一个object:
-object Main{ def main(args: Array[String]) : Unit = { println(&#34;Hello, World&#34;) } } Scala3出来之后，有了一个革命性的改善， 那就是main方法的入口直接用@main标注一下就可以了, hello world即刻变成one-liner:
-@main def hello: Unit = println(&#34;Hello world!&#34;) Scala3的编译器会自动生成外围结构，对于程序员来说，那些劳神子本就不应该操心，程序员是计算机语言的用户， 对用户来说，越简单越好，越少敲几次键盘越好。 编译器搞得好，就会把简单留给用户，把复杂留给自己。
-再加上Scala3废除了很傻逼的package object，用Scala3写脚本也将成为更加赏心悦目的体验。
-当然， Scala2.x也不是说不能写脚本， lihaoyi搞的Ammonite(https://ammonite.io/)也还不错， 但碰上Scala3就遭遇降级了，@main直接冲突，你有我也有，哈
-之前用Ammonite写了满满一个workspace.amm（项目），但架不住自己是IDE拉扯大的程序员出身啊， 没有了依赖的自动管理和语法的自动提示，语法再简单，用来写复杂一点儿的脚本也是小痛苦的事情，所以， Scala2.x时代， 囧最终还是宁愿新建一个dirtyWorks项目，IDE里写，IDE里跑， 实在高频的脚本，那咱就编译成jar直接java -jar xyz.jar呗，甚至于想进一步追求性能与迅速可用，那就用GraalVM的native-image编译成native的可执行文件并加到PATH里去run呗！
-Anyway，我觉得Scala3里第一个走对了的路就是去除package object，而且还一@main解千愁。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://biasedscala.github.io/posts/01-helloworld_zh/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-10-10T08:47:11+01:00" />
-<meta property="article:modified_time" content="2021-10-10T08:47:11+01:00" />
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.88.1" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Biased Scala之Hello World"/>
-<meta name="twitter:description" content="Scala3出来之前， 写个简单hello world程序要声明一个object:
-object Main{ def main(args: Array[String]) : Unit = { println(&#34;Hello, World&#34;) } } Scala3出来之后，有了一个革命性的改善， 那就是main方法的入口直接用@main标注一下就可以了, hello world即刻变成one-liner:
-@main def hello: Unit = println(&#34;Hello world!&#34;) Scala3的编译器会自动生成外围结构，对于程序员来说，那些劳神子本就不应该操心，程序员是计算机语言的用户， 对用户来说，越简单越好，越少敲几次键盘越好。 编译器搞得好，就会把简单留给用户，把复杂留给自己。
-再加上Scala3废除了很傻逼的package object，用Scala3写脚本也将成为更加赏心悦目的体验。
-当然， Scala2.x也不是说不能写脚本， lihaoyi搞的Ammonite(https://ammonite.io/)也还不错， 但碰上Scala3就遭遇降级了，@main直接冲突，你有我也有，哈
-之前用Ammonite写了满满一个workspace.amm（项目），但架不住自己是IDE拉扯大的程序员出身啊， 没有了依赖的自动管理和语法的自动提示，语法再简单，用来写复杂一点儿的脚本也是小痛苦的事情，所以， Scala2.x时代， 囧最终还是宁愿新建一个dirtyWorks项目，IDE里写，IDE里跑， 实在高频的脚本，那咱就编译成jar直接java -jar xyz.jar呗，甚至于想进一步追求性能与迅速可用，那就用GraalVM的native-image编译成native的可执行文件并加到PATH里去run呗！
-Anyway，我觉得Scala3里第一个走对了的路就是去除package object，而且还一@main解千愁。"/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://biasedscala.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://biasedscala.github.io/css/main.css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://biasedscala.github.io/css/dark.css" />
+  <title>Biased Scala之Hello World &middot; Biased Scala</title>
+  <meta name="description" content="" />
 
-	
-		<script src="https://biasedscala.github.io/js/main.js"></script>
+  
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
 </head>
 
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-	<h1 class="site-title"><a href="https://biasedscala.github.io/">Biased Scala</a></h1>
-	<div class="site-description"><nav class="nav social">
-			<ul class="flat"></ul>
-		</nav>
-	</div>
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://biasedscala.github.io/"><h1>Biased Scala</h1></a>
+      <p class="lead">
+       My Baised Opinion on Scala 
+      </p>
+    </div>
 
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="https://afoo.me">Blog</a>
-			</li>
-			
-			<li>
-				<a href="https://github.com/fujohnwang/">Github</a>
-			</li>
-			
-			<li>
-				<a href="https://www.linkedin.com/in/fujohnwang/">LinkedIn</a>
-			</li>
-			
-			<li>
-				<a href="https://twitter.com/fujohnwang">Twitter</a>
-			</li>
-			
-		</ul>
-	</nav>
-</div>
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://biasedscala.github.io/">Home</a> </li>
+        <li><a href="https://afoo.me"> Blog </a></li><li><a href="https://github.com/fujohnwang/"> Github </a></li><li><a href="https://www.linkedin.com/in/fujohnwang/"> LinkedIn </a></li><li><a href="https://twitter.com/fujohnwang"> Twitter </a></li>
+      </ul>
+    </nav>
 
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
 
-		<div class="post">
-			<div class="post-header">
-				
-					<div class="meta">
-						<div class="date">
-							<span class="day">10</span>
-							<span class="rest">Oct 2021</span>
-						</div>
-					</div>
-				
-				<div class="matter">
-					<h1 class="title">Biased Scala之Hello World</h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p><img src="images/cover.jpg" alt=""></p>
+    <main class="content container">
+    <div class="post">
+  <h1>Biased Scala之Hello World</h1>
+  <time datetime=2021-10-10T08:47:11&#43;0100 class="post-date">Sun, Oct 10, 2021</time>
+  <p><img src="images/cover.jpg" alt=""></p>
 <p>Scala3出来之前， 写个简单hello world程序要声明一个object:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
     <span style="color:#66d9ef">def</span> main<span style="color:#f92672">(</span>args<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Array</span><span style="color:#f92672">[</span><span style="color:#66d9ef">String</span><span style="color:#f92672">])</span> <span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Unit</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
@@ -110,20 +67,13 @@ Anyway，我觉得Scala3里第一个走对了的路就是去除package object，
 <p>之前用Ammonite写了满满一个<code>workspace.amm</code>（项目），但架不住自己是IDE拉扯大的程序员出身啊， 没有了依赖的自动管理和语法的自动提示，语法再简单，用来写复杂一点儿的脚本也是小痛苦的事情，所以， Scala2.x时代， 囧最终还是宁愿新建一个dirtyWorks项目，IDE里写，IDE里跑， 实在高频的脚本，那咱就编译成jar直接<code>java -jar xyz.jar</code>呗，甚至于想进一步追求性能与迅速可用，那就用GraalVM的native-image编译成native的可执行文件并加到PATH里去run呗！</p>
 <p>Anyway，我觉得Scala3里第一个走对了的路就是去除<code>package object</code>，而且还一<code>@main</code>解千愁。</p>
 
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div></div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
 </div>
 
 
-</body>
+    </main>
+
+    
+      
+    
+  </body>
 </html>

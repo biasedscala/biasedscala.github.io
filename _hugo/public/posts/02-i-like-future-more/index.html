@@ -1,86 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>BiasedScala: I like Future more than yesterday - Biased Scala</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="BiasedScala: I like Future more than yesterday">
-<meta itemprop="description" content="Although we have Executor/ExecutorService, even ForkJoinPool, most of the time, I only use Scala&rsquo;s Future instead. Not because others are not excellent or no good, just because I feel natural to use Future.
-I had said, if the syntax of a programming language is the taste of it, then I like scala&rsquo;s taste and stick with it. Same same, I like Future style instead of submit(task) or execute(runnable) styles, although the underneath mechanism is almost a same."><meta itemprop="datePublished" content="2021-10-15T08:47:11+01:00" />
-<meta itemprop="dateModified" content="2021-10-15T08:47:11+01:00" />
-<meta itemprop="wordCount" content="262">
-<meta itemprop="keywords" content="" /><meta property="og:title" content="BiasedScala: I like Future more than yesterday" />
-<meta property="og:description" content="Although we have Executor/ExecutorService, even ForkJoinPool, most of the time, I only use Scala&rsquo;s Future instead. Not because others are not excellent or no good, just because I feel natural to use Future.
-I had said, if the syntax of a programming language is the taste of it, then I like scala&rsquo;s taste and stick with it. Same same, I like Future style instead of submit(task) or execute(runnable) styles, although the underneath mechanism is almost a same." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://biasedscala.github.io/posts/02-i-like-future-more/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-10-15T08:47:11+01:00" />
-<meta property="article:modified_time" content="2021-10-15T08:47:11+01:00" />
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.88.1" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BiasedScala: I like Future more than yesterday"/>
-<meta name="twitter:description" content="Although we have Executor/ExecutorService, even ForkJoinPool, most of the time, I only use Scala&rsquo;s Future instead. Not because others are not excellent or no good, just because I feel natural to use Future.
-I had said, if the syntax of a programming language is the taste of it, then I like scala&rsquo;s taste and stick with it. Same same, I like Future style instead of submit(task) or execute(runnable) styles, although the underneath mechanism is almost a same."/>
-<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" media="screen" href="https://biasedscala.github.io/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="https://biasedscala.github.io/css/main.css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://biasedscala.github.io/css/dark.css" />
+  <title>BiasedScala: I like Future more than yesterday &middot; Biased Scala</title>
+  <meta name="description" content="" />
 
-	
-		<script src="https://biasedscala.github.io/js/main.js"></script>
+  
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
 </head>
 
-<body>
-	<div class="container wrapper">
-		<div class="header">
-	
-	<h1 class="site-title"><a href="https://biasedscala.github.io/">Biased Scala</a></h1>
-	<div class="site-description"><nav class="nav social">
-			<ul class="flat"></ul>
-		</nav>
-	</div>
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://biasedscala.github.io/"><h1>Biased Scala</h1></a>
+      <p class="lead">
+       My Baised Opinion on Scala 
+      </p>
+    </div>
 
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="https://afoo.me">Blog</a>
-			</li>
-			
-			<li>
-				<a href="https://github.com/fujohnwang/">Github</a>
-			</li>
-			
-			<li>
-				<a href="https://www.linkedin.com/in/fujohnwang/">LinkedIn</a>
-			</li>
-			
-			<li>
-				<a href="https://twitter.com/fujohnwang">Twitter</a>
-			</li>
-			
-		</ul>
-	</nav>
-</div>
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://biasedscala.github.io/">Home</a> </li>
+        <li><a href="https://afoo.me"> Blog </a></li><li><a href="https://github.com/fujohnwang/"> Github </a></li><li><a href="https://www.linkedin.com/in/fujohnwang/"> LinkedIn </a></li><li><a href="https://twitter.com/fujohnwang"> Twitter </a></li>
+      </ul>
+    </nav>
 
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
 
-		<div class="post">
-			<div class="post-header">
-				
-					<div class="meta">
-						<div class="date">
-							<span class="day">15</span>
-							<span class="rest">Oct 2021</span>
-						</div>
-					</div>
-				
-				<div class="matter">
-					<h1 class="title">BiasedScala: I like Future more than yesterday</h1>
-				</div>
-			</div>
-					
-			<div class="markdown">
-				<p><img src="images/cover.jpg" alt=""></p>
+    <main class="content container">
+    <div class="post">
+  <h1>BiasedScala: I like Future more than yesterday</h1>
+  <time datetime=2021-10-15T08:47:11&#43;0100 class="post-date">Fri, Oct 15, 2021</time>
+  <p><img src="images/cover.jpg" alt=""></p>
 <p>Although we have <strong>Executor/ExecutorService</strong>, even <strong>ForkJoinPool</strong>, most of the time, I only use Scala&rsquo;s <strong>Future</strong> instead. Not because others are not excellent or no good, just because I feel natural to use Future.</p>
 <p>I had said, if the syntax of a programming language is the taste of it, then I like scala&rsquo;s taste  and stick with it. Same same, I like <strong>Future</strong> style instead of <code>submit(task)</code> or <code>execute(runnable)</code> styles, although the underneath mechanism is almost a same.</p>
 <p>One of the scenarios I would like to use scala <strong>Future</strong> is where I use Vert.x to create some HTTP API. Since Vert.x advocates to write async code, and if the processing of IO or business logic takes too long, it will warn explicitly via <code>io.vertx.core.impl.BlockedThreadChecker</code>, so usually, I will wrap the processing in a <strong>Future</strong> block:</p>
@@ -97,20 +69,13 @@ I had said, if the syntax of a programming language is the taste of it, then I l
 <p>OK, I admit I am not telling you the whole story,  In fact, Future block needs some implicit <strong>ExecutionContext</strong> available in context, so we have to <code>import scala.concurrent.ExecutionContext.Implicits.global</code> in the beginning or some where before <strong>Future</strong> block is used. Of course, we can create some ExecutionContext by ourselves, and implicitly import it when using <strong>Future</strong> block, but since <code>import scala.concurrent.ExecutionContext.Implicits.global</code> is available, I don&rsquo;t think it&rsquo;s necessary anymore, most of the time, one global ExecutionContext will be cool.</p>
 <p>In Scala3, we can provide an implicit dependency with <code>given</code>, that&rsquo;s will be another story, stay tuned.</p>
 
-			</div>
-
-			<div class="tags">
-				
-					
-				
-			</div></div>
-	</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div>2021  <a href="https://github.com/knadh/hugo-ink">Ink</a> theme on <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
 </div>
 
 
-</body>
+    </main>
+
+    
+      
+    
+  </body>
 </html>
