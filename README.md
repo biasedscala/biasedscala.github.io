@@ -1,4 +1,4 @@
-# Biased Scala 
+# [Biased Scala](https://biasedscala.blogspot.com/)
 
 - [preface](_preface.md.html)
 	- [中文版本](开篇词.md.html)
