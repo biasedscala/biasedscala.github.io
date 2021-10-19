@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.88.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Biased Scala: Hello World &middot; Biased Scala</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://biasedscala.github.io/"><h1>Biased Scala</h1></a>
+      <p class="lead">
+       My Baised Opinion on Scala 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://biasedscala.github.io/">Home</a> </li>
+        <li><a href="https://github.com/fujohnwang/"> Github </a></li><li><a href="https://www.linkedin.com/in/fujohnwang/"> LinkedIn </a></li><li><a href="https://twitter.com/fujohnwang"> Twitter </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Biased Scala: Hello World</h1>
+  <time datetime=2021-10-10T08:47:11&#43;0100 class="post-date">Sun, Oct 10, 2021</time>
+  <p><img src="images/cover.jpg" alt=""></p>
+<p>Before Scala3, you have to declare a wrapper object for a simple hello world program:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">object</span> <span style="color:#a6e22e">Main</span><span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">def</span> main<span style="color:#f92672">(</span>args<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Array</span><span style="color:#f92672">[</span><span style="color:#66d9ef">String</span><span style="color:#f92672">])</span> <span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Unit</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+        println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello, World&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>When Scala3 comes, a great change follows. If we want to delare an entry method to run a program, we only need to annotate any method you want it to be the main with <code>@main</code> annotation, now, our hello world program becomes a simple one-linner:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#a6e22e">@main</span> <span style="color:#66d9ef">def</span> hello<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Unit</span> <span style="color:#f92672">=</span> println<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello world!&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><p>Scala3&rsquo;s compiler(dotty) will automatically generate all of the legacy external program structures for us, We don&rsquo;t care these legacy structures either, since we, the programers, are the users of the program language, we only need simplicity as users, even one key stroke causes burden ;)  If compiler rocks, simplicity will company us, and leaves complexicity to experts and scientists.</p>
+<p>Scala3 deprecated the <code>package object</code> feature, it&rsquo;s a right decision, which makes it a pleasure to do scripting with scala.</p>
+<p>Of course, Scala2.x also has alternatives for scripting, lihaoyi&rsquo;s <a href="https://ammonite.io/">Ammonite</a>(<a href="https://ammonite.io/">https://ammonite.io/</a>) is one of them. But since <code>@main</code> exists in both ammonite and scala3, they can&rsquo;t work together smoothly.</p>
+<p>I had written a lot of ammonite scripts under project repository <code>workspace.amm</code>, but I have to say, it&rsquo;s not a pleasant experience to do scripting things with ammonite, since I have worked in IDE so many years(wrote java a lot too), without dependency management and auto hint/completion, it&rsquo;s still a pain in the neck. So most of the time, I will setup a scala project in IDE, and write scala code in IDE, run scala code in IDE. When some scripts have to be executed in high frequent way, I will build it to uber jar and then run <code>java -jar xyz.jar</code>,  furthermore, if performance and quick availability is a must, I will build the jar to native executable with native-image of GraalVM. There always is another way, right?</p>
+<p>Anyway, deprecating/removing <code>package object</code> makes it right, and <code>@main</code> makes scripting much easier with scala.</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

@@ -1,4 +1,6 @@
-# [Biased Scala](https://biasedscala.blogspot.com/)
+![](images/cover.jpg)
+
+# [Biased Scala Index](https://biasedscala.blogspot.com/)
 
 - [preface](preface.md.html)
 	- [中文版本](开篇词.md.html)

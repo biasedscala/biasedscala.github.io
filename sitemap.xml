@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://biasedscala.github.io/</loc>
+    <lastmod>2021-10-15T08:47:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/posts/03-extension-makes-it-right/</loc>
+    <lastmod>2021-10-15T08:47:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/posts/02-i-like-future-more/</loc>
+    <lastmod>2021-10-15T08:47:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/posts/</loc>
+    <lastmod>2021-10-15T08:47:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/posts/00-why-i-choose-scala/</loc>
+    <lastmod>2021-10-11T08:47:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/posts/01-helloworld/</loc>
+    <lastmod>2021-10-10T08:47:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/posts/01-helloworld_zh/</loc>
+    <lastmod>2021-10-10T08:47:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/posts/%E5%BC%80%E7%AF%87%E8%AF%8D/</loc>
+    <lastmod>2021-10-10T08:47:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/posts/preface/</loc>
+    <lastmod>2021-10-10T08:46:11+01:00</lastmod>
+  </url><url>
+    <loc>https://biasedscala.github.io/categories/</loc>
+  </url><url>
+    <loc>https://biasedscala.github.io/tags/</loc>
+  </url>
+</urlset>
