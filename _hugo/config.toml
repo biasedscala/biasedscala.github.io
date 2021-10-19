@@ -10,6 +10,7 @@ theme = "hyde"
 
 [Menus]
   main = [
+      {Name = "Blog", URL = "https://afoo.me"},
       {Name = "Twitter", URL = "https://twitter.com/fujohnwang"},
       {Name = "Github", URL = "https://github.com/fujohnwang/"},
       {Name = "LinkedIn", URL = "https://www.linkedin.com/in/fujohnwang/"}
