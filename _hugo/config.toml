@@ -7,7 +7,7 @@ theme = "hyde"
 
 [params]
   description = "My Baised Opinion on Scala"
-
+  copyright = "© 王福强个人版权所有 (All Rights Reserverd by FQ)"
 
 [Menus]
   main = [
