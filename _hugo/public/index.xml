@@ -15,7 +15,8 @@
       <guid>https://biasedscala.github.io/posts/03-extension-makes-it-right/</guid>
       <description>I get to know extension is via Kotlin, After Scala3, extension comes to scala also. Cheerful, isn&amp;rsquo;t it?
 extension is an elegant way to extend types and classes.
-Let&amp;rsquo;s say,</description>
+I use Commons-Lang3 library a lot to process string things, Let&amp;rsquo;s say, StringUtils.isEmpty(StringUtils.trimToEmpty(..)) or StringUtils.substringBetween(StrinUtils.trimToEmpty(..), .., ..), it&amp;rsquo;s necessary for precaution, but tedious, isn&amp;rsquo;t it? With Scala 3&amp;rsquo;s extension ability, we can make this more natural and elegant:
+extension (s:String) { def isEmpty():Boolean = StringUtils.</description>
     </item>
     
     <item>

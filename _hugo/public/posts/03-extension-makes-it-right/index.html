@@ -54,9 +54,37 @@
   <time datetime=2021-10-15T08:47:11&#43;0100 class="post-date">Fri, Oct 15, 2021</time>
   <p>I get to know extension is via Kotlin, After Scala3, extension comes to scala also. Cheerful, isn&rsquo;t it?</p>
 <p><code>extension</code> is an elegant way to extend types and classes.</p>
-<p>Let&rsquo;s say,</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">
-</code></pre></div>
+<p>I use Commons-Lang3 library a lot to process string things, Let&rsquo;s say, <code>StringUtils.isEmpty(StringUtils.trimToEmpty(..))</code> or <code>StringUtils.substringBetween(StrinUtils.trimToEmpty(..), .., ..)</code>, it&rsquo;s necessary for precaution, but tedious, isn&rsquo;t it?  With Scala 3&rsquo;s <code>extension</code> ability, we can make this more natural and elegant:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">extension <span style="color:#f92672">(</span>s<span style="color:#66d9ef">:</span><span style="color:#66d9ef">String</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">def</span> isEmpty<span style="color:#f92672">()</span><span style="color:#66d9ef">:</span><span style="color:#66d9ef">Boolean</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StringUtils</span><span style="color:#f92672">.</span>isEmpty<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">def</span> trimToEmpty<span style="color:#f92672">()</span><span style="color:#66d9ef">:</span><span style="color:#66d9ef">String</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StringUtils</span><span style="color:#f92672">.</span>trimToEmpty<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">def</span> isEmptyAfterTrim<span style="color:#f92672">()</span><span style="color:#66d9ef">:</span><span style="color:#66d9ef">Boolean</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StringUtils</span><span style="color:#f92672">.</span>isEmpty<span style="color:#f92672">(</span><span style="color:#a6e22e">StringUtils</span><span style="color:#f92672">.</span>trimToEmpty<span style="color:#f92672">(</span>s<span style="color:#f92672">))</span>
+    <span style="color:#66d9ef">def</span> substringBetween<span style="color:#f92672">(</span>from<span style="color:#66d9ef">:</span><span style="color:#66d9ef">String</span><span style="color:#f92672">,</span> to<span style="color:#66d9ef">:</span><span style="color:#66d9ef">String</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">:</span><span style="color:#66d9ef">String</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">StringUtils</span><span style="color:#f92672">.</span>substringBetween<span style="color:#f92672">(</span>s<span style="color:#f92672">,</span> from<span style="color:#f92672">,</span> to<span style="color:#f92672">)</span>
+    <span style="color:#f92672">...</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>after that, we just use String as the way it is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">val</span> str <span style="color:#66d9ef">=</span> <span style="color:#e6db74">&#34;....&#34;</span>
+<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>str<span style="color:#f92672">.</span>isEmpty<span style="color:#f92672">())</span> <span style="color:#f92672">...</span>
+<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>str<span style="color:#f92672">.</span>isEmptyAfterTrim<span style="color:#f92672">())...</span>
+<span style="color:#66d9ef">val</span> partWeWant <span style="color:#66d9ef">=</span> str<span style="color:#f92672">.</span>substringBetween<span style="color:#f92672">(..,</span> <span style="color:#f92672">..)</span>
+</code></pre></div><p>This&rsquo;s so cool, and I like it this way.</p>
+<p>We can also make extension generic, for example, we want our Money type has a display symbol when convert to string, then we can add an extension to it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala">extension <span style="color:#f92672">[</span><span style="color:#66d9ef">M</span> <span style="color:#66d9ef">&lt;:</span> <span style="color:#66d9ef">Money</span><span style="color:#f92672">]</span> <span style="color:#f92672">(</span>money<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">M</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">def</span> toStringWithSymbol<span style="color:#f92672">()</span><span style="color:#66d9ef">:</span><span style="color:#66d9ef">String</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>
+        money <span style="color:#66d9ef">match</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">USD</span> <span style="color:#66d9ef">=&gt;</span> <span style="color:#e6db74">&#34;$&#34;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">CNY</span> <span style="color:#66d9ef">=&gt;</span> <span style="color:#e6db74">&#34;¥&#34;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">GBP</span> <span style="color:#66d9ef">=&gt;</span> <span style="color:#e6db74">&#34;£&#34;</span>
+            <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">=&gt;</span> <span style="color:#e6db74">&#34;#&#34;</span>
+        <span style="color:#f92672">}</span> <span style="color:#f92672">+</span> money<span style="color:#f92672">.</span>amount
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>With this extension, we can display meaningful information to our customers on GUIs or Pages of our applications:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">val</span> m<span style="color:#66d9ef">:</span><span style="color:#66d9ef">Money</span> <span style="color:#f92672">=</span> <span style="color:#f92672">...</span>
+println<span style="color:#f92672">(</span>m<span style="color:#f92672">.</span>toStringWithSymbol<span style="color:#f92672">)</span> <span style="color:#75715e">// usually pass with DTO
+</span></code></pre></div><p>Formerly, if we want to extend some 3rd party libraries classes, we have to wrap them in some utility classes, especially these 3rd classes don&rsquo;t expose enough priviledge to extend them.</p>
+<p>Now, with extension of Scala 3, we just provide an extension to them, and everything goes like a charm.</p>
+
 </div>
 
 

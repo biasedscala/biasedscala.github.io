@@ -58,7 +58,12 @@
   <time datetime="2021-10-15T08:47:11&#43;0100" class="post-date">Fri, Oct 15, 2021</time>
   I get to know extension is via Kotlin, After Scala3, extension comes to scala also. Cheerful, isn&rsquo;t it?
 extension is an elegant way to extend types and classes.
-Let&rsquo;s say,
+I use Commons-Lang3 library a lot to process string things, Let&rsquo;s say, StringUtils.isEmpty(StringUtils.trimToEmpty(..)) or StringUtils.substringBetween(StrinUtils.trimToEmpty(..), .., ..), it&rsquo;s necessary for precaution, but tedious, isn&rsquo;t it? With Scala 3&rsquo;s extension ability, we can make this more natural and elegant:
+extension (s:String) { def isEmpty():Boolean = StringUtils.
+  
+  <div class="read-more-link">
+    <a href="/posts/03-extension-makes-it-right/">Read More…</a>
+  </div>
   
 </article><article class="post">
   <h1 class="post-title">
