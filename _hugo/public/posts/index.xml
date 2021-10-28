@@ -6,7 +6,26 @@
     <description>Recent content in Posts on Biased Scala</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Oct 2021 08:47:11 +0100</lastBuildDate><atom:link href="https://biasedscala.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Oct 2021 12:42:10 +0800</lastBuildDate><atom:link href="https://biasedscala.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BiasedScala: instance_without_new</title>
+      <link>https://biasedscala.github.io/posts/new_instance_without_new/</link>
+      <pubDate>Wed, 27 Oct 2021 12:42:10 +0800</pubDate>
+      
+      <guid>https://biasedscala.github.io/posts/new_instance_without_new/</guid>
+      <description>TO BE DONE, Stay tuned~</description>
+    </item>
+    
+    <item>
+      <title>BiasedScala: collection converters should be gone</title>
+      <link>https://biasedscala.github.io/posts/collection_and_extension_are_perfect_match/</link>
+      <pubDate>Wed, 27 Oct 2021 12:39:39 +0800</pubDate>
+      
+      <guid>https://biasedscala.github.io/posts/collection_and_extension_are_perfect_match/</guid>
+      <description>Scala offers its own collection framework besides java&amp;rsquo;s collections. But most of the time, I use more java&amp;rsquo;s collection than scala&amp;rsquo;s. So that means, I have to import converters to convert to or convert from java collections or scala collections. This is annoying in my opinion.
+Furthermore, in Scala2.12.x and Scala2.13.x, the collection converters are different, I have write down a note for this or put two code snippets in my Dash.</description>
+    </item>
+    
     <item>
       <title>BiasedScala: extension makes a right way</title>
       <link>https://biasedscala.github.io/posts/03-extension-makes-it-right/</link>
