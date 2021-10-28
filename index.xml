@@ -6,7 +6,18 @@
     <description>Recent content on Biased Scala</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Oct 2021 12:42:10 +0800</lastBuildDate><atom:link href="https://biasedscala.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Oct 2021 22:39:53 +0800</lastBuildDate><atom:link href="https://biasedscala.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Prefer Maven To SBT as Scala Build Tool</title>
+      <link>https://biasedscala.github.io/posts/i_prefer_maven_to_sbt/</link>
+      <pubDate>Thu, 28 Oct 2021 22:39:53 +0800</pubDate>
+      
+      <guid>https://biasedscala.github.io/posts/i_prefer_maven_to_sbt/</guid>
+      <description>To work with scala with pleasure and effeciency, I had tried SBT, maven, gradle from time to time, but at last I stay with Maven as my main build tool for scala.
+Although SBT is popular in scala community, and I had put a lot of time and attention to it before, let&amp;rsquo;s say:
+ The chapter about SBT in &amp;ldquo;Real World Scala&amp;rdquo;(incomplete), https://github.com/CSUG/real_world_scala/blob/master/02_sbt.markdown How to write a SBT 0.10+ plugin?</description>
+    </item>
+    
     <item>
       <title>BiasedScala: instance_without_new</title>
       <link>https://biasedscala.github.io/posts/new_instance_without_new/</link>
