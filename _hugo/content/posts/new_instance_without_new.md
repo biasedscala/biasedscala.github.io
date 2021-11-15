@@ -1,5 +1,5 @@
 ---
-title: "BiasedScala: instance_without_new"
+title: "BiasedScala: Initializing without new"
 date: 2021-10-27T12:42:10+08:00
 ---
 
@@ -18,13 +18,18 @@ It's not a big deal in the most of the time, but when Scala3 comes, the `new` ke
 val payload = JsonObject()
 ```
 
-The most beautiful thing is that this makes method chaining easier:
+Underneatch, Scala3 compiler will take care of the old `new` things, this time, scala team **leave simple to user and leave complexity to themselves**.
+
+The most beautiful thing with this feature is that it makes method chaining easier:
 
 ```scala
 val payload = JsonObject()
   .put("apiUser","xyz")
   .put("apiKey","xxx")
   .put("message", JsonObject().put("text", "Hello world!"))
+
+// of course, most of the time, I just write above code in one-liner:
+// val payload = JsonObject().put("apiUser","xyz").put("apiKey","xxx").put("message", JsonObject().put("text", "Hello world!"))
 ```
 
 As a vertx json API user, I like this feature very much ;)

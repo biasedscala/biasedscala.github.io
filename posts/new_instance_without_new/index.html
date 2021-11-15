@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>BiasedScala: instance_without_new &middot; Biased Scala</title>
+  <title>BiasedScala: Initializing without new &middot; Biased Scala</title>
   <meta name="description" content="" />
 
   
@@ -50,7 +50,7 @@
 
     <main class="content container">
     <div class="post">
-  <h1>BiasedScala: instance_without_new</h1>
+  <h1>BiasedScala: Initializing without new</h1>
   <time datetime=2021-10-27T12:42:10&#43;0800 class="post-date">Wed, Oct 27, 2021</time>
   <p>In the old days, when we want to create some instances of some classes, we have to use the <code>new</code> keyword, just like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">val</span> payloadOldWay <span style="color:#66d9ef">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">JsonObject</span><span style="color:#f92672">();</span>
@@ -58,12 +58,16 @@
 <span style="color:#66d9ef">val</span> message <span style="color:#66d9ef">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">JsonObject</span>
 </code></pre></div><p>It&rsquo;s not a big deal in the most of the time, but when Scala3 comes, the <code>new</code> keyword is not mandatory anymore, I think it&rsquo;s a small change BUT a big step, <strong>less keystrokes matter</strong>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">val</span> payload <span style="color:#66d9ef">=</span> <span style="color:#a6e22e">JsonObject</span><span style="color:#f92672">()</span>
-</code></pre></div><p>The most beautiful thing is that this makes method chaining easier:</p>
+</code></pre></div><p>Underneatch, Scala3 compiler will take care of the old <code>new</code> things, this time, scala team <strong>leave simple to user and leave complexity to themselves</strong>.</p>
+<p>The most beautiful thing with this feature is that it makes method chaining easier:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scala" data-lang="scala"><span style="color:#66d9ef">val</span> payload <span style="color:#66d9ef">=</span> <span style="color:#a6e22e">JsonObject</span><span style="color:#f92672">()</span>
   <span style="color:#f92672">.</span>put<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;apiUser&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;xyz&#34;</span><span style="color:#f92672">)</span>
   <span style="color:#f92672">.</span>put<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;apiKey&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;xxx&#34;</span><span style="color:#f92672">)</span>
   <span style="color:#f92672">.</span>put<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">,</span> <span style="color:#a6e22e">JsonObject</span><span style="color:#f92672">().</span>put<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;text&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello world!&#34;</span><span style="color:#f92672">))</span>
-</code></pre></div><p>As a vertx json API user, I like this feature very much ;)</p>
+
+<span style="color:#75715e">// of course, most of the time, I just write above code in one-liner:
+</span><span style="color:#75715e">// val payload = JsonObject().put(&#34;apiUser&#34;,&#34;xyz&#34;).put(&#34;apiKey&#34;,&#34;xxx&#34;).put(&#34;message&#34;, JsonObject().put(&#34;text&#34;, &#34;Hello world!&#34;))
+</span></code></pre></div><p>As a vertx json API user, I like this feature very much ;)</p>
 <p>I am old fashioned, so simple json libray which is easy to understand like vertx is my favorite, I don&rsquo;t like marshalling/unmarshalling with other libraries with reflection or other meta programming tricks.</p>
 
   <footer>

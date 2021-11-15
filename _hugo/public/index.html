@@ -66,12 +66,12 @@ Although SBT is popular in scala community, and I had put a lot of time and atte
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/new_instance_without_new/">BiasedScala: instance_without_new</a>
+    <a href="https://biasedscala.github.io/posts/new_instance_without_new/">BiasedScala: Initializing without new</a>
   </h1>
   <time datetime="2021-10-27T12:42:10&#43;0800" class="post-date">Wed, Oct 27, 2021</time>
   In the old days, when we want to create some instances of some classes, we have to use the new keyword, just like this:
 val payloadOldWay = new JsonObject(); val message = new JsonObject It&rsquo;s not a big deal in the most of the time, but when Scala3 comes, the new keyword is not mandatory anymore, I think it&rsquo;s a small change BUT a big step, less keystrokes matter:
-val payload = JsonObject() The most beautiful thing is that this makes method chaining easier:
+val payload = JsonObject() Underneatch, Scala3 compiler will take care of the old new things, this time, scala team leave simple to user and leave complexity to themselves.
   
   <div class="read-more-link">
     <a href="/posts/new_instance_without_new/">Read More…</a>
