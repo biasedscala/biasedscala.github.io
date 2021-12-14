@@ -30,7 +30,7 @@ Scala3的编译器会自动生成外围结构，对于程序员来说，那些�
 
 
 
-当然， Scala2.x也不是说不能写脚本， lihaoyi搞的[Ammonite](https://ammonite.io/)(https://ammonite.io/)也还不错， 但碰上Scala3就遭遇降级了，`@main`直接冲突，你有我也有，哈
+当然， Scala2.x也不是说不能写脚本， lihaoyi搞的[Ammonite](https://ammonite.io/)(https://ammonite.io/)也还不错， 但碰上Scala3就遭遇降级了，`@main`直接冲突，你有我也有，哈 (好在可以各自单独跑， ammonite的脚本用amm跑， scala3的用scala3去run)
 
 
 
