@@ -15,7 +15,7 @@
       <guid>https://biasedscala.github.io/posts/i_prefer_maven_to_sbt/</guid>
       <description>To work with scala with pleasure and effeciency, I had tried SBT, maven, gradle from time to time, but at last I stay with Maven as my main build tool for scala.
 Although SBT is popular in scala community, and I had put a lot of time and attention to it before, let&amp;rsquo;s say:
- The chapter about SBT in &amp;ldquo;Real World Scala&amp;rdquo;(incomplete), https://github.com/CSUG/real_world_scala/blob/master/02_sbt.markdown How to write a SBT 0.10+ plugin?</description>
+The chapter about SBT in &amp;ldquo;Real World Scala&amp;rdquo;(incomplete), https://github.com/CSUG/real_world_scala/blob/master/02_sbt.markdown How to write a SBT 0.10+ plugin? Understanding SBT In My Way, 2011/10/09 But at last, I found, it&amp;rsquo;s tricky to follow up the version and evolution of this tool, so I stay with maven finally, and with springboot&amp;rsquo;s maven plugin, everything gets simple:</description>
     </item>
     
     <item>

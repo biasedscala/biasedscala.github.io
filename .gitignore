@@ -1,3 +1,4 @@
 *.class
 *.log
 .DS_Store
+_hugo/.hugo_build.lock
