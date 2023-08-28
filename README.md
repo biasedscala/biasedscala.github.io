@@ -14,3 +14,6 @@
 [About Me](https://afoo.me/whoami.html)
 
 
+# The Status
+
+This site was built with hugo first, but discard it and turn to pure static pages.
