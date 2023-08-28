@@ -12,10 +12,10 @@
   <meta name="description" content="My Baised Opinion on Scala" />
 
   
-  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://biasedscala.github.io/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="/css/hyde.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
 
 
@@ -24,7 +24,7 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="https://biasedscala.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Biased Scala" />
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Biased Scala" />
   
 </head>
 
@@ -32,7 +32,7 @@
   <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://biasedscala.github.io/"><h1>Biased Scala</h1></a>
+      <a href="/"><h1>Biased Scala</h1></a>
       <p class="lead">
        My Baised Opinion on Scala 
       </p>
@@ -40,7 +40,7 @@
 
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="https://biasedscala.github.io/">Home</a> </li>
+        <li><a href="/">Home</a> </li>
         <li><a href="https://afoo.me"> Blog </a></li><li><a href="https://github.com/fujohnwang/"> Github </a></li><li><a href="https://www.linkedin.com/in/fujohnwang/"> LinkedIn </a></li><li><a href="https://twitter.com/fujohnwang"> Twitter </a></li>
       </ul>
     </nav>
@@ -53,7 +53,7 @@
     <div class="posts">
 <article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/i_prefer_maven_to_sbt/">I Prefer Maven To SBT as Scala Build Tool</a>
+    <a href="/posts/i_prefer_maven_to_sbt/">I Prefer Maven To SBT as Scala Build Tool</a>
   </h1>
   <time datetime="2021-10-28T22:39:53&#43;0800" class="post-date">Thu, Oct 28, 2021</time>
   To work with scala with pleasure and effeciency, I had tried SBT, maven, gradle from time to time, but at last I stay with Maven as my main build tool for scala.
@@ -66,7 +66,7 @@ Although SBT is popular in scala community, and I had put a lot of time and atte
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/new_instance_without_new/">BiasedScala: Initializing without new</a>
+    <a href="/posts/new_instance_without_new/">BiasedScala: Initializing without new</a>
   </h1>
   <time datetime="2021-10-27T12:42:10&#43;0800" class="post-date">Wed, Oct 27, 2021</time>
   In the old days, when we want to create some instances of some classes, we have to use the new keyword, just like this:
@@ -79,7 +79,7 @@ val payload = JsonObject() Underneatch, Scala3 compiler will take care of the ol
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/collection_and_extension_are_perfect_match/">BiasedScala: collection converters should be gone</a>
+    <a href="/posts/collection_and_extension_are_perfect_match/">BiasedScala: collection converters should be gone</a>
   </h1>
   <time datetime="2021-10-27T12:39:39&#43;0800" class="post-date">Wed, Oct 27, 2021</time>
   Scala offers its own collection framework besides java&rsquo;s collections. But most of the time, I use more java&rsquo;s collection than scala&rsquo;s. So that means, I have to import converters to convert to or convert from java collections or scala collections. This is annoying in my opinion.
@@ -91,7 +91,7 @@ Furthermore, in Scala2.12.x and Scala2.13.x, the collection converters are diffe
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/03-extension-makes-it-right/">BiasedScala: extension makes a right way</a>
+    <a href="/posts/03-extension-makes-it-right/">BiasedScala: extension makes a right way</a>
   </h1>
   <time datetime="2021-10-15T08:47:11&#43;0100" class="post-date">Fri, Oct 15, 2021</time>
   I get to know extension is via Kotlin, After Scala3, extension comes to scala also. Cheerful, isn&rsquo;t it?
@@ -105,7 +105,7 @@ extension (s:String) { def isEmpty():Boolean = StringUtils.
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/02-i-like-future-more/">BiasedScala: I like Future more than yesterday</a>
+    <a href="/posts/02-i-like-future-more/">BiasedScala: I like Future more than yesterday</a>
   </h1>
   <time datetime="2021-10-15T08:47:11&#43;0100" class="post-date">Fri, Oct 15, 2021</time>
   Although we have Executor/ExecutorService, even ForkJoinPool, most of the time, I only use Scala&rsquo;s Future instead. Not because others are not excellent or no good, just because I feel natural to use Future.
@@ -117,7 +117,7 @@ I had said, if the syntax of a programming language is the taste of it, then I l
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/00-why-i-choose-scala/">BiasedScala: Why I Chose Scala</a>
+    <a href="/posts/00-why-i-choose-scala/">BiasedScala: Why I Chose Scala</a>
   </h1>
   <time datetime="2021-10-11T08:47:11&#43;0100" class="post-date">Mon, Oct 11, 2021</time>
   I have been writing Scala code for many years, since sbt 0.11.x days.
@@ -132,7 +132,7 @@ Pragmatic I set up a big picture for a team that I think I would like to build a
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/01-helloworld/">Biased Scala: Hello World</a>
+    <a href="/posts/01-helloworld/">Biased Scala: Hello World</a>
   </h1>
   <time datetime="2021-10-10T08:47:11&#43;0100" class="post-date">Sun, Oct 10, 2021</time>
   Before Scala3, you have to declare a wrapper object for a simple hello world program:
@@ -144,7 +144,7 @@ object Main{ def main(args: Array[String]) : Unit = { println(&#34;Hello, World&
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/01-helloworld_zh/">Biased Scala之Hello World</a>
+    <a href="/posts/01-helloworld_zh/">Biased Scala之Hello World</a>
   </h1>
   <time datetime="2021-10-10T08:47:11&#43;0100" class="post-date">Sun, Oct 10, 2021</time>
   Scala3出来之前， 写个简单hello world程序要声明一个object:
@@ -157,7 +157,7 @@ Anyway，我觉得Scala3里第一个走对了的路就是去除package object，
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/%E5%BC%80%E7%AF%87%E8%AF%8D/">BiasedScala: 开篇词</a>
+    <a href="/posts/%E5%BC%80%E7%AF%87%E8%AF%8D/">BiasedScala: 开篇词</a>
   </h1>
   <time datetime="2021-10-10T08:47:11&#43;0100" class="post-date">Sun, Oct 10, 2021</time>
   因为是个人对Scala的观点与使用上的裁剪，所以， 我称之为BiasedScala， 既带有个人偏见的Scala。
@@ -168,7 +168,7 @@ BiasedScala专栏将陆续分享出一系列个人在Scala上的一些观点、�
   
 </article><article class="post">
   <h1 class="post-title">
-    <a href="https://biasedscala.github.io/posts/preface/">BiasedScala: Preface</a>
+    <a href="/posts/preface/">BiasedScala: Preface</a>
   </h1>
   <time datetime="2021-10-10T08:46:11&#43;0100" class="post-date">Sun, Oct 10, 2021</time>
   Since the content of this column is ONLY my own point of view, so the name BiasedScala comes. Prejudices mayb.

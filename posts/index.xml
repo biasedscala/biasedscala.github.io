@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Biased Scala</title>
-    <link>https://biasedscala.github.io/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Biased Scala</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Oct 2021 22:39:53 +0800</lastBuildDate><atom:link href="https://biasedscala.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Oct 2021 22:39:53 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I Prefer Maven To SBT as Scala Build Tool</title>
-      <link>https://biasedscala.github.io/posts/i_prefer_maven_to_sbt/</link>
+      <link>/posts/i_prefer_maven_to_sbt/</link>
       <pubDate>Thu, 28 Oct 2021 22:39:53 +0800</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/i_prefer_maven_to_sbt/</guid>
+      <guid>/posts/i_prefer_maven_to_sbt/</guid>
       <description>To work with scala with pleasure and effeciency, I had tried SBT, maven, gradle from time to time, but at last I stay with Maven as my main build tool for scala.
 Although SBT is popular in scala community, and I had put a lot of time and attention to it before, let&amp;rsquo;s say:
 The chapter about SBT in &amp;ldquo;Real World Scala&amp;rdquo;(incomplete), https://github.com/CSUG/real_world_scala/blob/master/02_sbt.markdown How to write a SBT 0.10+ plugin? Understanding SBT In My Way, 2011/10/09 But at last, I found, it&amp;rsquo;s tricky to follow up the version and evolution of this tool, so I stay with maven finally, and with springboot&amp;rsquo;s maven plugin, everything gets simple:</description>
@@ -20,10 +20,10 @@ The chapter about SBT in &amp;ldquo;Real World Scala&amp;rdquo;(incomplete), htt
     
     <item>
       <title>BiasedScala: Initializing without new</title>
-      <link>https://biasedscala.github.io/posts/new_instance_without_new/</link>
+      <link>/posts/new_instance_without_new/</link>
       <pubDate>Wed, 27 Oct 2021 12:42:10 +0800</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/new_instance_without_new/</guid>
+      <guid>/posts/new_instance_without_new/</guid>
       <description>In the old days, when we want to create some instances of some classes, we have to use the new keyword, just like this:
 val payloadOldWay = new JsonObject(); val message = new JsonObject It&amp;rsquo;s not a big deal in the most of the time, but when Scala3 comes, the new keyword is not mandatory anymore, I think it&amp;rsquo;s a small change BUT a big step, less keystrokes matter:
 val payload = JsonObject() Underneatch, Scala3 compiler will take care of the old new things, this time, scala team leave simple to user and leave complexity to themselves.</description>
@@ -31,20 +31,20 @@ val payload = JsonObject() Underneatch, Scala3 compiler will take care of the ol
     
     <item>
       <title>BiasedScala: collection converters should be gone</title>
-      <link>https://biasedscala.github.io/posts/collection_and_extension_are_perfect_match/</link>
+      <link>/posts/collection_and_extension_are_perfect_match/</link>
       <pubDate>Wed, 27 Oct 2021 12:39:39 +0800</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/collection_and_extension_are_perfect_match/</guid>
+      <guid>/posts/collection_and_extension_are_perfect_match/</guid>
       <description>Scala offers its own collection framework besides java&amp;rsquo;s collections. But most of the time, I use more java&amp;rsquo;s collection than scala&amp;rsquo;s. So that means, I have to import converters to convert to or convert from java collections or scala collections. This is annoying in my opinion.
 Furthermore, in Scala2.12.x and Scala2.13.x, the collection converters are different, I have write down a note for this or put two code snippets in my Dash.</description>
     </item>
     
     <item>
       <title>BiasedScala: extension makes a right way</title>
-      <link>https://biasedscala.github.io/posts/03-extension-makes-it-right/</link>
+      <link>/posts/03-extension-makes-it-right/</link>
       <pubDate>Fri, 15 Oct 2021 08:47:11 +0100</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/03-extension-makes-it-right/</guid>
+      <guid>/posts/03-extension-makes-it-right/</guid>
       <description>I get to know extension is via Kotlin, After Scala3, extension comes to scala also. Cheerful, isn&amp;rsquo;t it?
 extension is an elegant way to extend types and classes.
 I use Commons-Lang3 library a lot to process string things, Let&amp;rsquo;s say, StringUtils.isEmpty(StringUtils.trimToEmpty(..)) or StringUtils.substringBetween(StrinUtils.trimToEmpty(..), .., ..), it&amp;rsquo;s necessary for precaution, but tedious, isn&amp;rsquo;t it? With Scala 3&amp;rsquo;s extension ability, we can make this more natural and elegant:
@@ -53,20 +53,20 @@ extension (s:String) { def isEmpty():Boolean = StringUtils.</description>
     
     <item>
       <title>BiasedScala: I like Future more than yesterday</title>
-      <link>https://biasedscala.github.io/posts/02-i-like-future-more/</link>
+      <link>/posts/02-i-like-future-more/</link>
       <pubDate>Fri, 15 Oct 2021 08:47:11 +0100</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/02-i-like-future-more/</guid>
+      <guid>/posts/02-i-like-future-more/</guid>
       <description>Although we have Executor/ExecutorService, even ForkJoinPool, most of the time, I only use Scala&amp;rsquo;s Future instead. Not because others are not excellent or no good, just because I feel natural to use Future.
 I had said, if the syntax of a programming language is the taste of it, then I like scala&amp;rsquo;s taste and stick with it. Same same, I like Future style instead of submit(task) or execute(runnable) styles, although the underneath mechanism is almost a same.</description>
     </item>
     
     <item>
       <title>BiasedScala: Why I Chose Scala</title>
-      <link>https://biasedscala.github.io/posts/00-why-i-choose-scala/</link>
+      <link>/posts/00-why-i-choose-scala/</link>
       <pubDate>Mon, 11 Oct 2021 08:47:11 +0100</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/00-why-i-choose-scala/</guid>
+      <guid>/posts/00-why-i-choose-scala/</guid>
       <description>I have been writing Scala code for many years, since sbt 0.11.x days.
 I checked a project that I open sourced many years ago when I was working at Alibaba, it tells me that it was 11 years ago.
 What time flies&amp;hellip;
@@ -76,20 +76,20 @@ Pragmatic I set up a big picture for a team that I think I would like to build a
     
     <item>
       <title>Biased Scala: Hello World</title>
-      <link>https://biasedscala.github.io/posts/01-helloworld/</link>
+      <link>/posts/01-helloworld/</link>
       <pubDate>Sun, 10 Oct 2021 08:47:11 +0100</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/01-helloworld/</guid>
+      <guid>/posts/01-helloworld/</guid>
       <description>Before Scala3, you have to declare a wrapper object for a simple hello world program:
 object Main{ def main(args: Array[String]) : Unit = { println(&amp;#34;Hello, World&amp;#34;) } } When Scala3 comes, a great change follows. If we want to delare an entry method to run a program, we only need to annotate any method you want it to be the main with @main annotation, now, our hello world program becomes a simple one-linner:</description>
     </item>
     
     <item>
       <title>Biased Scala之Hello World</title>
-      <link>https://biasedscala.github.io/posts/01-helloworld_zh/</link>
+      <link>/posts/01-helloworld_zh/</link>
       <pubDate>Sun, 10 Oct 2021 08:47:11 +0100</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/01-helloworld_zh/</guid>
+      <guid>/posts/01-helloworld_zh/</guid>
       <description>Scala3出来之前， 写个简单hello world程序要声明一个object:
 object Main{ def main(args: Array[String]) : Unit = { println(&amp;#34;Hello, World&amp;#34;) } } Scala3出来之后，有了一个革命性的改善， 那就是main方法的入口直接用@main标注一下就可以了, hello world即刻变成one-liner:
 @main def hello: Unit = println(&amp;#34;Hello world!&amp;#34;) Scala3的编译器会自动生成外围结构，对于程序员来说，那些劳神子本就不应该操心，程序员是计算机语言的用户， 对用户来说，越简单越好，越少敲几次键盘越好。 编译器搞得好，就会把简单留给用户，把复杂留给自己。
@@ -101,10 +101,10 @@ Anyway，我觉得Scala3里第一个走对了的路就是去除package object，
     
     <item>
       <title>BiasedScala: 开篇词</title>
-      <link>https://biasedscala.github.io/posts/%E5%BC%80%E7%AF%87%E8%AF%8D/</link>
+      <link>/posts/%E5%BC%80%E7%AF%87%E8%AF%8D/</link>
       <pubDate>Sun, 10 Oct 2021 08:47:11 +0100</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/%E5%BC%80%E7%AF%87%E8%AF%8D/</guid>
+      <guid>/posts/%E5%BC%80%E7%AF%87%E8%AF%8D/</guid>
       <description>因为是个人对Scala的观点与使用上的裁剪，所以， 我称之为BiasedScala， 既带有个人偏见的Scala。
 BiasedScala专栏将陆续分享出一系列个人在Scala上的一些观点、喜好与实践，本就小众，全做自娱自乐。
 国庆节回家， 我妈饭桌上说了一句话我挺喜欢，别人教她用各种新的方法做鱼肉做鸡肉，但所有方法试过之后，还是觉得自己的方法做出来的口味更适合自己。 其实任何事情都是如此，没有试炼过当然没有资格或者没有意义去说这个东西我不喜欢，没兴趣，只有都试过了，才会选择一个适合自己的。
@@ -114,10 +114,10 @@ BiasedScala专栏将陆续分享出一系列个人在Scala上的一些观点、�
     
     <item>
       <title>BiasedScala: Preface</title>
-      <link>https://biasedscala.github.io/posts/preface/</link>
+      <link>/posts/preface/</link>
       <pubDate>Sun, 10 Oct 2021 08:46:11 +0100</pubDate>
       
-      <guid>https://biasedscala.github.io/posts/preface/</guid>
+      <guid>/posts/preface/</guid>
       <description>Since the content of this column is ONLY my own point of view, so the name BiasedScala comes. Prejudices mayb.
 Scala community is small, so I don&amp;rsquo;t think this column will become popular, I just would like to write it.
 I went back to my hometown on vacation of National Day(China). My mom prepared several dishes for dinner. When we were eating, one of the topics we talked about which is the best way of cooking chicken.</description>
